@@ -130,13 +130,13 @@ class DomManipulation {
                     'Content-type': 'application/json; charset=UTF-8'
                   }  
             })
-            .then(response => response.json())
-            .then((text) =>{
+            .then(response => response.json().then((text) =>{
                 // document.getElementById('responseJsonText').value = text;
                 document.getElementById('responceTxtArea').value = text;
                 console.log(text);
                 // Prism.highlightAll();
-            }).catch(() => alert('some error occured'));
+            }).catch(() => alert('some error occured'));)
+            
         }
 
     }
